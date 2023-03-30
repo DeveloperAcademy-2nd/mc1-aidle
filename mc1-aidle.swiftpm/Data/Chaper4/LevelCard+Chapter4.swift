@@ -9,6 +9,12 @@ import Foundation
 
 extension LevelCard {
     enum Stage4 {
+        static let ddan = LevelCard(
+            firstImageKey: "lv1ddan",
+            secondImageKey: "lv2ddan",
+            nextScene: StoryScene.StoryScene4.suriSuri
+        )
+        
         static let juju = LevelCard(
             firstImageKey: "lv1juju",
             secondImageKey: "lv2juju",

@@ -49,14 +49,13 @@ extension StoryScene {
         static let jdd = GeneralStoryScene(
             image: ImageData(key: "incar02"),
             audioKey: "끼익",
-            speaker: Learner.byo,
             script: "끼이익 (돈 나가는 소리)",
             nextScene: StoryScene.Byo.runorpay
         )
         
         static let runorpay = SelectionStoryScene(
             speaker: Learner.byo,
-            script: "",
+            script: "...",
             options: [
                 .init(
                     text: "차주에게 연락한다.",
@@ -71,7 +70,6 @@ extension StoryScene {
         
         static let ckck = GeneralStoryScene(
             audioKey: "철컹",
-            speaker: Learner.byo,
             script: "철컹철컹",
             nextScene: StoryScene.Byo.runorpay2
         )
@@ -79,7 +77,7 @@ extension StoryScene {
         static let runorpay2 = SelectionStoryScene(
             image: ImageData(key: "incar02"),
             speaker: Learner.byo,
-            script: "",
+            script: "...",
             options: [
                 .init(
                     text: "차주에게 연락한다.",

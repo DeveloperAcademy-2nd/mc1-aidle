@@ -32,7 +32,7 @@ extension StoryScene {
                 ),
                 .init(
                     text: "피곤하지만 팀원들과 열심히 해석한다",
-                    nextScene: Stage3.worry
+                    nextScene: LevelCard.Stage3.suri
                 )
             ]
         )
