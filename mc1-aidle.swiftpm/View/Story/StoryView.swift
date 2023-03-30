@@ -19,9 +19,7 @@ struct StoryView: View {
                 
                 if let scene = viewModel.getCurrentScene() {
                     VStack {
-                        if let options = (scene as? SelectionStoryScene)?.options {
-                            optionsView(options: options)
-                        }
+                        optionsView(options: (scene as? SelectionStoryScene)?.options ?? [])
                         
                         Spacer()
                         
@@ -57,6 +55,7 @@ struct StoryView: View {
             }
         }
         .frame(width: width)
+        .padding(.bottom, 100)
         .animation(.easeInOut, value: image)
         .onTapGesture {
             viewModel.gotoNextScene()
@@ -70,16 +69,20 @@ struct StoryView: View {
                     viewModel.gotoScene(of: option)
                 } label: {
                     Text(option.text)
-                        .frame(height: 75)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal, 32)
+                        .multilineTextAlignment(.leading)
                         .font(.custom(.dungGeun, size: 24))
                         .foregroundColor(.black)
+                        .padding(.vertical, 24)
+                        .padding(.horizontal, 32)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(
+                            Image("layout_option")
+                                .resizable(
+                                    capInsets: EdgeInsets(top: 32, leading: 32, bottom: 32, trailing: 32),
+                                    resizingMode: .tile
+                                )
+                        )
                 }
-                .background(
-                    Image("layout_option")
-                        .resizable()
-                )
             }
         }
         .padding(.top, 64)
@@ -87,36 +90,10 @@ struct StoryView: View {
     }
     
     private func dialogView(scene: DialogStorySceneable) -> some View {
-        VStack(spacing: 0) {
-            if let speaker = scene.speaker {
-                HStack {
-                    Text(speaker.name)
-                        .frame(height: 64)
-                        .padding(.horizontal, 24)
-                        .font(.custom(.dungGeun, size: 30))
-                        .background(.white)
-                        .border(.black, width: 5)
-                        .offset(y: 5)
-                    Spacer()
-                }
+        StoryDialogView(scene: scene)
+            .onTapGesture {
+                viewModel.gotoNextScene()
             }
-            
-            VStack {
-                Text(scene.script)
-                    .font(.custom(.dungGeun, size: 24))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                Spacer()
-            }
-            .padding(32)
-            .frame(height: 311)
-            .background(
-                Image("layout_dialog")
-                    .resizable()
-            )
-        }
-        .onTapGesture {
-            viewModel.gotoNextScene()
-        }
     }
 }
 

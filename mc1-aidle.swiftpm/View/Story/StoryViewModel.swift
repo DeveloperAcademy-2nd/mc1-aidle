@@ -5,7 +5,7 @@
 //  Created by byo on 2023/03/28.
 //
 
-import Foundation
+import SwiftUI
 
 protocol StoryViewModelDelegate: AnyObject {
     func storyDidEnd(nextScene: NarrativeSceneable?)

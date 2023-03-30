@@ -19,16 +19,15 @@ struct StageView: View {
                     Text(stage.stageNum)
                         .font(.custom(.neo, size: 80))
                         .foregroundColor(.titleTextColor)
-                        .padding(1)
+                        .padding(.bottom, 1)
                     Text(stage.title)
                         .font(.custom(.neo, size: 40))
                         .foregroundColor(.titleTextColor)
-                    Spacer()
+                        .padding(.bottom, 60)
                     Image(stage.titleImageKey)
                         .resizable()
                         .scaledToFit()
-                        .padding()
-                    Spacer()
+                        .padding(.horizontal, 40)
                 }
             }
         }
