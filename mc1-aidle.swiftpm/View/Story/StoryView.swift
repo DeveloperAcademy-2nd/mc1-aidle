@@ -70,16 +70,20 @@ struct StoryView: View {
                     viewModel.gotoScene(of: option)
                 } label: {
                     Text(option.text)
-                        .frame(height: 75)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal, 32)
+                        .multilineTextAlignment(.leading)
                         .font(.custom(.dungGeun, size: 24))
                         .foregroundColor(.black)
+                        .padding(.vertical, 24)
+                        .padding(.horizontal, 32)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(
+                            Image("layout_option")
+                                .resizable(
+                                    capInsets: EdgeInsets(top: 32, leading: 32, bottom: 32, trailing: 32),
+                                    resizingMode: .tile
+                                )
+                        )
                 }
-                .background(
-                    Image("layout_option")
-                        .resizable()
-                )
             }
         }
         .padding(.top, 64)
@@ -108,7 +112,7 @@ struct StoryView: View {
                 Spacer()
             }
             .padding(32)
-            .frame(height: 311)
+            .frame(height: 250)
             .background(
                 Image("layout_dialog")
                     .resizable()
