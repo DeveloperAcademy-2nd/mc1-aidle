@@ -44,6 +44,6 @@ struct LevelCardView: View {
  
 struct LevelCardView_Previews: PreviewProvider {
     static var previews: some View {
-        LevelCardView(firstImageKey: "jujuLv1", secondImageKey: "jujuLv2")
+        LevelCardView(firstImageKey: "lv1juju", secondImageKey: "lv2juju")
     }
 }
