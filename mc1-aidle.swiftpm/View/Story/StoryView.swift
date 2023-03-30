@@ -57,6 +57,7 @@ struct StoryView: View {
             }
         }
         .frame(width: width)
+        .padding(.bottom, 100)
         .animation(.easeInOut, value: image)
         .onTapGesture {
             viewModel.gotoNextScene()
