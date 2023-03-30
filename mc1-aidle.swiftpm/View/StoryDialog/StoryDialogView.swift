@@ -33,6 +33,9 @@ struct StoryDialogView: View {
                             .offset(y: 5)
                         Spacer()
                     }
+                    .transaction {
+                        $0.animation = nil
+                    }
                 }
                 
                 VStack {

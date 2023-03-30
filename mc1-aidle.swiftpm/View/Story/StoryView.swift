@@ -19,9 +19,7 @@ struct StoryView: View {
                 
                 if let scene = viewModel.getCurrentScene() {
                     VStack {
-                        if let options = (scene as? SelectionStoryScene)?.options {
-                            optionsView(options: options)
-                        }
+                        optionsView(options: (scene as? SelectionStoryScene)?.options ?? [])
                         
                         Spacer()
                         

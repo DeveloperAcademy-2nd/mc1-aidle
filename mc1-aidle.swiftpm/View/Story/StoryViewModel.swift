@@ -42,9 +42,7 @@ class StoryViewModel: ObservableObject {
     func gotoNextScene() {
         switch currentScene {
         case let storyScene as ContinuousStorySceneable:
-            withAnimation {
-                currentScene = storyScene.nextScene
-            }
+            currentScene = storyScene.nextScene
         case let narrativeScene as ContinuousNarrativeSceneable:
             delegate?.storyDidEnd(nextScene: narrativeScene.nextScene)
         default:
@@ -56,9 +54,7 @@ class StoryViewModel: ObservableObject {
         guard let nextScene = option.nextScene else {
             return
         }
-        withAnimation {
-            currentScene = nextScene
-        }
+        currentScene = nextScene
     }
     
     private func sceneDidSet(_ scene: StorySceneable?) {
