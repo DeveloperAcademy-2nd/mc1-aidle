@@ -40,7 +40,7 @@ extension StoryScene {
         )
         
         static let jujuWant = SelectionStoryScene(
-            image: ImageData(key: "쥬쥬2"),
+            image: ImageData(key: "2juju"),
             speaker: Learner.juju,
             script: "기획을 해보고 싶긴 했는데...",
             options: [
@@ -60,7 +60,7 @@ extension StoryScene {
         )
         
         static let jujuWinter = GeneralStoryScene(
-            image: ImageData(key: "쥬쥬2"),
+            image: ImageData(key: "2juju"),
             audioKey: "nextlevel",
             speaker: Learner.juju,
             script: "이번 발표로 에스파 신곡 한번 추실래요?\n제가 윈터할게요!",
@@ -75,7 +75,7 @@ extension StoryScene {
         )
         
         static let jujuConfused = SelectionStoryScene(
-            image: ImageData(key: "쥬쥬2"),
+            image: ImageData(key: "2juju"),
             speaker: Learner.juju,
             script: "왜 다른 의견을 아무도 안내고 다 그저 좋다고만 하지?\n우리 이대로 괜찮은 걸까..",
             options: [
