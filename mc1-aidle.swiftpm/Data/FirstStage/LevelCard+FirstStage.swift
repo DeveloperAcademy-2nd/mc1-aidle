@@ -12,7 +12,6 @@ extension LevelCard {
         static let juju = LevelCard(
             firstImageKey: "jujuLv1",
             secondImageKey: "jujuLv2",
-            audioKey: "캐릭터카드등장",
             nextScene: Stage.Byo.first
         )
     }
