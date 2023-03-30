@@ -85,18 +85,13 @@ extension StoryScene {
                 ),
                 .init(
                     text: "이렇게 가다가 진짜 망할것같으니 회식을 추진하자",
-                    nextScene: FirstStage.ending
+                    nextScene: LevelCard.FirstStage.juju
                 ),
                 .init(
                     text: "데이지 섭 미안해요 MC2부터 잘할게요",
                     nextScene: nil
                 )
             ]
-        )
-        
-        static let ending = EndingStoryScene(
-            script: "",
-            nextScene: LevelCard.FirstStage.juju
         )
     }
 }
