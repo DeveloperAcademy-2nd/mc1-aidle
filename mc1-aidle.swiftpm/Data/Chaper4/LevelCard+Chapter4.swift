@@ -12,7 +12,19 @@ extension LevelCard {
         static let ddan = LevelCard(
             firstImageKey: "lv1ddan",
             secondImageKey: "lv2ddan",
-            nextScene: Stage.Sample.second
+            nextScene: StoryScene.StoryScene4.suriSuri
+        )
+        
+        static let juju = LevelCard(
+            firstImageKey: "lv1juju",
+            secondImageKey: "lv2juju",
+            nextScene: Stage4.theo
+        )
+        
+        static let theo = LevelCard(
+            firstImageKey: "lv1theo",
+            secondImageKey: "lv2theo",
+            nextScene: Ending.cards
         )
     }
 }

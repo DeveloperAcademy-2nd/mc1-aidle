@@ -10,10 +10,9 @@ import Foundation
 extension LevelCard {
     enum Byo {
         static let byo = LevelCard(
-            firstImageKey: "byoLv1",
-            secondImageKey: "byoLv2",
-            audioKey: "캐릭터카드등장",
-            nextScene: nil
+            firstImageKey: "lv1byo",
+            secondImageKey: "lv2byo",
+            nextScene: Stage.Stage3.stage3
         )
     }
 }

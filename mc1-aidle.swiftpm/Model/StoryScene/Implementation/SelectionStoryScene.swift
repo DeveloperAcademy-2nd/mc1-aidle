@@ -27,10 +27,10 @@ final class SelectionStoryScene: StoryScene, DialogStorySceneable {
 extension SelectionStoryScene {
     final class Option: Identifiable {
         let text: String
-        let nextScene: StorySceneable?
+        let nextScene: NarrativeSceneable?
         
         init(text: String,
-             nextScene: StoryScene?) {
+             nextScene: NarrativeSceneable?) {
             self.text = text
             self.nextScene = nextScene
         }

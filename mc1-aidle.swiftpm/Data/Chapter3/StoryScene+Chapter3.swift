@@ -32,7 +32,7 @@ extension StoryScene {
                 ),
                 .init(
                     text: "피곤하지만 팀원들과 열심히 해석한다",
-                    nextScene: Stage3.worry
+                    nextScene: LevelCard.Stage3.suri
                 )
             ]
         )
@@ -45,7 +45,7 @@ extension StoryScene {
         
         static let sticker = GeneralStoryScene(
             image: ImageData(key: "balanceGame1"),
-            script: "스티커판 설문을 진행해야 한다. 하지만 사람들에게 다가가기 조차 힘든 (A)I-DLE",
+            script: "스티커판 설문을 진행해야 한다. 하지만 사람들에게 다가가기 조차 힘들다.",
             nextScene: StoryScene.Stage3.brave
         )
         

@@ -23,6 +23,8 @@ struct NarrativeView: View {
                 storyView(scene: storyScene)
             case let levelCard as LevelCard:
                 levelCardView(levelCard: levelCard)
+            case let ending as Ending:
+                endingView()
             default:
                 restartView()
             }
@@ -54,6 +56,10 @@ struct NarrativeView: View {
         )
         view.delegate = viewModel
         return view
+    }
+    
+    private func endingView() -> some View {
+        EndingCards()
     }
     
     private func restartView() -> some View {

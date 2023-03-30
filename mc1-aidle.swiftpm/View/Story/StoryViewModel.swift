@@ -51,10 +51,14 @@ class StoryViewModel: ObservableObject {
     }
     
     func gotoScene(of option: SelectionStoryScene.Option) {
-        guard let nextScene = option.nextScene else {
+        guard let scene = option.nextScene else {
             return
         }
-        currentScene = nextScene
+        if let storyScene = scene as? StorySceneable {
+            currentScene = storyScene
+        } else {
+            delegate?.storyDidEnd(nextScene: scene)
+        }
     }
     
     private func sceneDidSet(_ scene: StorySceneable?) {

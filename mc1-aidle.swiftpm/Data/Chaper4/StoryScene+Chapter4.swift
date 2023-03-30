@@ -93,22 +93,14 @@ extension StoryScene {
             options: [
                 .init(
                     text: "테오가 너무 바빠보인다. 도와줘야..겠지?",
-                    nextScene: StoryScene.StoryScene4.tempDdan
+                    nextScene: LevelCard.Stage4.ddan
                 ),
                 .init(
                     text: "조용히 가위질을 하며 버스를 탄다",
-                    nextScene: StoryScene.StoryScene4.tempDdan
+                    nextScene: LevelCard.Stage4.ddan
                 )
             ]
         )
-        
-        ///딴 레벨업카드 들어가는 장면. 수정필요
-        static let tempDdan = GeneralStoryScene(
-            image: ImageData(key: "11"),
-            script: "딴 레벨업카드 들어가는 장면. 수정필요",
-            nextScene: StoryScene.StoryScene4.suriSuri
-        )
-        ///
         
         static let suriSuri = GeneralStoryScene(
             image: ImageData(key: "harry"),
@@ -133,14 +125,12 @@ extension StoryScene {
                 )
             ]
         )
-
+        
         static let ending4 = EndingStoryScene(
             image: ImageData(key: "presentation", isGif: false),
             script: "발표는 쥬쥬와 테오가 맡게 되었다.",
-            nextScene: LevelCard.Sample.juju
+            nextScene: LevelCard.Stage4.juju
         )
-
-            
     }
 }
 

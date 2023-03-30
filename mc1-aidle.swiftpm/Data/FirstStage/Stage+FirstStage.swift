@@ -9,7 +9,7 @@ import Foundation
 
 extension Stage {
     enum FirstStage {
-        static let juju = Stage(
+        static let first = Stage(
             stageNum: "STAGE1",
             title: "숨막히는 첫 만남",
             titleImageKey: "firststage_main",

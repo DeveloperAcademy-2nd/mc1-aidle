@@ -15,7 +15,5 @@ extension Stage {
             titleImageKey: "stage1Image",
             nextScene: StoryScene.StoryScene4.afml
         )
-        
-
     }
 }

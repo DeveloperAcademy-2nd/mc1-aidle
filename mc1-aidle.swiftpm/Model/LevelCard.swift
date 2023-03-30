@@ -15,7 +15,7 @@ class LevelCard: NarrativeSceneable, ContinuousNarrativeSceneable, AudioNarrativ
     
     init(firstImageKey: String,
          secondImageKey: String,
-         audioKey: String? = nil,
+         audioKey: String? = "캐릭터카드등장",
          nextScene: NarrativeSceneable?) {
         self.firstImageKey = firstImageKey
         self.secondImageKey = secondImageKey
