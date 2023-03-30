@@ -5,7 +5,7 @@
 //  Created by byo on 2023/03/28.
 //
 
-import Foundation
+import SwiftUI
 
 protocol StoryViewModelDelegate: AnyObject {
     func storyDidEnd(nextScene: NarrativeSceneable?)
@@ -42,7 +42,9 @@ class StoryViewModel: ObservableObject {
     func gotoNextScene() {
         switch currentScene {
         case let storyScene as ContinuousStorySceneable:
-            currentScene = storyScene.nextScene
+            withAnimation {
+                currentScene = storyScene.nextScene
+            }
         case let narrativeScene as ContinuousNarrativeSceneable:
             delegate?.storyDidEnd(nextScene: narrativeScene.nextScene)
         default:
@@ -54,7 +56,9 @@ class StoryViewModel: ObservableObject {
         guard let nextScene = option.nextScene else {
             return
         }
-        currentScene = nextScene
+        withAnimation {
+            currentScene = nextScene
+        }
     }
     
     private func sceneDidSet(_ scene: StorySceneable?) {
