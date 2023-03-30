@@ -20,7 +20,7 @@ extension LevelCard {
             firstImageKey: "lv1theo",
             secondImageKey: "lv2theo",
             audioKey: "캐릭터카드등장",
-            nextScene: nil
+            nextScene: Stage.Stage4.first4
         )
 
     }

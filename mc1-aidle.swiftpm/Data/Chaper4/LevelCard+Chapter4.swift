@@ -12,7 +12,7 @@ extension LevelCard {
         static let ddan = LevelCard(
             firstImageKey: "lv1ddan",
             secondImageKey: "lv2ddan",
-            nextScene: Stage.Sample.second
+            nextScene: nil
         )
     }
 }
