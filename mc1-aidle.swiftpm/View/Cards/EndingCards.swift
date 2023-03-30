@@ -8,15 +8,30 @@
 import SwiftUI
 
 struct EndingCards: View {
-    let cards : [String] = [
-    "99jake","99juju","99suri","99ddan","99byo","99theo"]
+    let cards1 : [String] = [
+        "lv2jake","lv2juju","lv2suri","lv2ddan","lv2byo","lv2theo"
+    ]
+    let cards2 : [String] = [
+        "99jake","99juju","99suri","99ddan","99byo","99theo"
+    ]
     var body: some View {
         return GeometryReader { proxy in
             ZStack{
                 Color.backgroundColor.ignoresSafeArea()
                 ScrollView(.horizontal) {
                     HStack(spacing: 0) {
-                        ForEach(cards, id: \.self) { card in
+                        ForEach(cards1, id: \.self) { card in
+                            Image(card)
+                                .resizable()
+                                .scaledToFit()
+                                .padding()
+                        }
+                        .frame(width: proxy.size.width, height: proxy.size.height)
+                        
+                        Text("앞으로도 아이들은계속해서 변화하고성장 할겁니다...\n기대해 주세요.").font(.custom(.dungGeun, size: 24))
+                            .frame(width: proxy.size.width, height: proxy.size.height)
+                        
+                        ForEach(cards2, id: \.self) { card in
                             Image(card)
                                 .resizable()
                                 .scaledToFit()
