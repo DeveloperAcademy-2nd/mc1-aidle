@@ -92,36 +92,10 @@ struct StoryView: View {
     }
     
     private func dialogView(scene: DialogStorySceneable) -> some View {
-        VStack(spacing: 0) {
-            if let speaker = scene.speaker {
-                HStack {
-                    Text(speaker.name)
-                        .frame(height: 64)
-                        .padding(.horizontal, 24)
-                        .font(.custom(.dungGeun, size: 30))
-                        .background(.white)
-                        .border(.black, width: 5)
-                        .offset(y: 5)
-                    Spacer()
-                }
+        StoryDialogView(scene: scene)
+            .onTapGesture {
+                viewModel.gotoNextScene()
             }
-            
-            VStack {
-                Text(scene.script)
-                    .font(.custom(.dungGeun, size: 24))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                Spacer()
-            }
-            .padding(32)
-            .frame(height: 250)
-            .background(
-                Image("layout_dialog")
-                    .resizable()
-            )
-        }
-        .onTapGesture {
-            viewModel.gotoNextScene()
-        }
     }
 }
 
