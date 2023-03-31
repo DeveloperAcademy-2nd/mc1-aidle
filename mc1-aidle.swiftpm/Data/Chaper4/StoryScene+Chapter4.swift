@@ -123,7 +123,7 @@ extension StoryScene {
         )
         
         static let ending4 = EndingStoryScene(
-            image: ImageData(key: "presentation", isGif: false),
+            image: ImageData(key: "presen", isGif: false),
             script: "발표는 쥬쥬와 테오가 맡게 되었다.",
             nextScene: LevelCard.Stage4.juju
         )
