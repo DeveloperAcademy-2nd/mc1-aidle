@@ -20,13 +20,13 @@ extension StoryScene {
         static let pizzaCall = GeneralStoryScene(
             image: ImageData(key: "tired"),
             speaker: Learner.jake,
-            script: "계속되는 작업으로 팀원들이 지쳤고 딴은 농담으로 나한테 피자를 사달라고 한다. \n하지만 나는 통장잔고 부족으로 인해 무지출 챌린지를 하는 중이다.",
+            script: "계속되는 작업으로 팀원들이 지쳤고 딴은 농담으로 나한테 피자를 사달라고 한다.\n하지만 나는 통장잔고 부족으로 인해 무지출 챌린지를 하는 중이다.",
             nextScene: StoryScene.StoryScene4.pizzaGoldenBell
         )
         
         static let pizzaGoldenBell = SelectionStoryScene(
             speaker: Learner.jake,
-            script: "계속되는 작업으로 팀원들이 지쳤고 딴은 농담으로 나한테 피자를 사달라고 한다. \n하지만 나는 통장잔고 부족으로 인해 무지출 챌린지를 하는 중이다.",
+            script: "계속되는 작업으로 팀원들이 지쳤고 딴은 농담으로 나한테 피자를 사달라고 한다.\n하지만 나는 통장잔고 부족으로 인해 무지출 챌린지를 하는 중이다.",
             options: [
                 .init(
                     text: "사기 진작을 위해 피자를 쏜다.",
@@ -34,7 +34,7 @@ extension StoryScene {
                 ),
                 .init(
                     text: "못들은 척하고 딴을 손절한다.",
-                    nextScene: StoryScene.StoryScene4.noMoney
+                    nextScene: nil
                 )
             ]
         )
@@ -55,21 +55,17 @@ extension StoryScene {
                     nextScene: StoryScene.StoryScene4.theGlory
                 ),
                 .init(
-                    text: "분당 집을 판다.",
-                    nextScene: StoryScene.StoryScene4.theGlory
-                ),
-                .init(
                     text: "오늘 상 쳤으니 주식 일부를 판다.",
-                    nextScene: StoryScene.StoryScene4.theGlory
+                    nextScene: nil
                 )
             ]
         )
         
         static let theGlory = GeneralStoryScene(
-            image: ImageData(key: "2jake"),
+            image: ImageData(key: "jakepizza", isGif: true),
             audioKey: "멋지다연진아",
             speaker: Learner.jake,
-            script: "비록 통장 잔고는 처참하지만... 야근.. 할 수 있겠지? 그래.. 그거면 된 거야... 멋지다 (A)I-dle!",
+            script: "비록 통장 잔고는 처참하지만... 야근.. 할 수 있겠지? 그래.. 그거면 된 거야... 멋지다 (A)I-DLE!",
             nextScene: StoryScene.StoryScene4.workHard
         )
         
@@ -83,13 +79,13 @@ extension StoryScene {
         static let nowMessy = GeneralStoryScene(
             image: ImageData(key: "desk06"),
             speaker: Learner.ddan,
-            script: "쥬쥬는 멀티가 안되서 아무리 불러도 대답이 없다 (ㄹㅇ 노답) 난 테크인데 코딩을 할 수 없다 (역시 🐶노답) 뭘 해야하지..? (테오만 혼자 뺑이 치는 각인데...)",
+            script: "쥬쥬는 멀티가 안되서 아무리 불러도 대답이 없다 (ㄹㅇ 노답)\n난 테크인데 코딩을 할 수 없다 (역시 🐶노답)\n뭘 해야하지..? (테오만 혼자 뺑이 치는 각인데...)",
             nextScene: StoryScene.StoryScene4.ddanChoice
         )
         
         static let ddanChoice = SelectionStoryScene(
             speaker: Learner.ddan,
-            script: "쥬쥬는 멀티가 안되서 아무리 불러도 대답이 없다 (ㄹㅇ 노답) 난 테크인데 코딩을 할 수 없다 (역시 🐶노답) 뭘 해야하지..? (테오만 혼자 뺑이 치는 각인데...)",
+            script: "쥬쥬는 멀티가 안되서 아무리 불러도 대답이 없다 (ㄹㅇ 노답)\n난 테크인데 코딩을 할 수 없다 (역시 🐶노답)\n뭘 해야하지..? (테오만 혼자 뺑이 치는 각인데...)",
             options: [
                 .init(
                     text: "테오가 너무 바빠보인다. 도와줘야..겠지?",
@@ -97,7 +93,7 @@ extension StoryScene {
                 ),
                 .init(
                     text: "조용히 가위질을 하며 버스를 탄다",
-                    nextScene: LevelCard.Stage4.ddan
+                    nextScene: nil
                 )
             ]
         )
@@ -117,7 +113,7 @@ extension StoryScene {
             options: [
                 .init(
                     text: "조용히 발표를 맡는다.",
-                    nextScene: StoryScene.StoryScene4.ending4
+                    nextScene: nil
                 ),
                 .init(
                     text: "단호하게 인생의 여정을 들려준다.",

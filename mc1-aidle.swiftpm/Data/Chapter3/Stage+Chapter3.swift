@@ -10,7 +10,7 @@ import Foundation
 extension Stage {
     enum Stage3 {
         static let stage3 = Stage(
-            stageNum: "Chapter 3",
+            stageNum: "STAGE3",
             title: "고난의 연속",
             titleImageKey: "desk05",
             nextScene: StoryScene.Stage3.interview

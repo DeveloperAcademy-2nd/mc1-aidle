@@ -10,7 +10,7 @@ import Foundation
 extension Stage {
     enum Byo {
         static let first = Stage(
-            stageNum: "Chapter 2",
+            stageNum: "STAGE2",
             title: "스크래치",
             titleImageKey: "stage2Image",
             nextScene: StoryScene.Byo.cover
