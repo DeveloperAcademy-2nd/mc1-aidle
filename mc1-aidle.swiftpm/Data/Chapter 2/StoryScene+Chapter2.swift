@@ -36,7 +36,7 @@ extension StoryScene {
                     nextScene: jdd
                 ),
                 .init(
-                    text: "포기하고 다른 곳을 찾는다.\n(귀찮으니까 5%의 확률을 믿어본다.)",
+                    text: "포기하고 다른 곳을 찾는다.",
                     nextScene: nil
                 )
             ]

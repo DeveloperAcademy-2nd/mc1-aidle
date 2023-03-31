@@ -45,12 +45,12 @@ extension StoryScene {
             script: "기획을 해보고 싶긴 했는데...",
             options: [
                 .init(
-                    text: "댄스 워크숍을 열어서 친해지자",
-                    nextScene: nil
-                ),
-                .init(
                     text: "아무도 안나서니 박력있게 팀을 리드한다",
                     nextScene: FirstStage.jujuWinter
+                ),
+                .init(
+                    text: "어떻게든 되겠지...",
+                    nextScene: nil
                 )
             ]
         )
