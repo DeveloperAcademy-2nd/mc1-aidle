@@ -85,7 +85,7 @@ extension NarrativeViewModel: LevelCardViewDelegate {
 extension NarrativeViewModel: RestartViewDelegate {
     func restartDidEnd() {
         withAnimation {
-            currentScene = initialScene
+            currentScene = StoryScene.Byo.runorpay // initialScene
         }
     }
 }
