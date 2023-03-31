@@ -12,7 +12,7 @@ extension Stage {
         static let first = Stage(
             stageNum: "STAGE2",
             title: "스크래치",
-            titleImageKey: "stage2Image",
+            titleImageKey: "scratch",
             nextScene: StoryScene.Byo.cover
         )
     }

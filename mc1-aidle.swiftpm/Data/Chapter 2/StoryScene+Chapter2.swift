@@ -10,7 +10,7 @@ import Foundation
 extension StoryScene {
     enum Byo {
         static let cover = SelectionStoryScene(
-            image: ImageData(key: "incar01"),
+            image: ImageData(key: "2byo"),
             speaker: Learner.byo,
             script: "어떤 눈치 없는 사람이 첫날부터 회식을 하자고 해서 회식을 하게 되었다.\n\n아...**...지금까지 다 어사고 내 차에 다 못타는데...",
             options: [
@@ -26,7 +26,7 @@ extension StoryScene {
         )
         
         static let selection1 = SelectionStoryScene(
-            image: ImageData(key: "incar02"),
+            image: ImageData(key: "car01"),
             audioKey: "고민할때",
             speaker: Learner.byo,
             script: "너무 좁아보이는데...",
@@ -43,7 +43,7 @@ extension StoryScene {
         )
         
         static let jdd = GeneralStoryScene(
-            image: ImageData(key: "incar02"),
+            image: ImageData(key: "car02"),
             audioKey: "끼익",
             script: "끼이익 (돈 나가는 소리)",
             nextScene: StoryScene.Byo.runorpay
@@ -65,6 +65,7 @@ extension StoryScene {
         )
         
         static let ckck = GeneralStoryScene(
+            image: ImageData(key: "usami"),
             audioKey: "철컹",
             script: "철컹철컹",
             nextScene: StoryScene.Byo.runorpay2
