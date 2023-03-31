@@ -87,22 +87,6 @@ extension StoryScene {
             ]
         )
         
-        static let runorpay2 = SelectionStoryScene(
-            image: ImageData(key: "incar02"),
-            speaker: Learner.byo,
-            script: "...",
-            options: [
-                .init(
-                    text: "차주에게 연락한다.",
-                    nextScene: sibal
-                ),
-                .init(
-                    text: "튄다 (도망쳐 도망쳐)",
-                    nextScene: nil
-                )
-            ]
-        )
-        
         static let sibal = EndingStoryScene(
             speaker: Learner.byo,
             script: "하하호호...하하하...하하...씨*",
