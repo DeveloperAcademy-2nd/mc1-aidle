@@ -19,6 +19,7 @@ class StoryViewModel: ObservableObject {
     }
     
     @Published private var image: ImageData?
+    @Published private var selectedOption: SelectionStoryScene.Option?
     
     private let audioPlayer: AudioPlayer
     
@@ -39,6 +40,10 @@ class StoryViewModel: ObservableObject {
         image
     }
     
+    func getSelectedOption() -> SelectionStoryScene.Option? {
+        selectedOption
+    }
+    
     func gotoNextScene() {
         switch currentScene {
         case let storyScene as ContinuousStorySceneable:
@@ -54,10 +59,16 @@ class StoryViewModel: ObservableObject {
         guard let scene = option.nextScene else {
             return
         }
-        if let storyScene = scene as? StorySceneable {
-            currentScene = storyScene
-        } else {
-            delegate?.storyDidEnd(nextScene: scene)
+        withAnimation {
+            selectedOption = option
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            if let storyScene = scene as? StorySceneable {
+                self.currentScene = storyScene
+                self.selectedOption = nil
+            } else {
+                self.delegate?.storyDidEnd(nextScene: scene)
+            }
         }
     }
     

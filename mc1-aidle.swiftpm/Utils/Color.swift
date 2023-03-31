@@ -10,4 +10,5 @@ import SwiftUI
 extension Color {
     static let backgroundColor = Color("backgroundColor")
     static let titleTextColor = Color("titleTextColor")
+    static let idlePink = Color("idlePink")
 }

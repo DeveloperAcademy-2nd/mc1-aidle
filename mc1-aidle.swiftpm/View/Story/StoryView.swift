@@ -19,7 +19,9 @@ struct StoryView: View {
                 
                 if let scene = viewModel.getCurrentScene() {
                     VStack {
-                        optionsView(options: (scene as? SelectionStoryScene)?.options ?? [])
+                        if let optionScene = (scene as? SelectionStoryScene) {
+                            optionsView(scene: optionScene)
+                        }
                         
                         Spacer()
                         
@@ -62,26 +64,30 @@ struct StoryView: View {
         }
     }
     
-    private func optionsView(options: [SelectionStoryScene.Option]) -> some View {
+    private func optionsView(scene: SelectionStoryScene) -> some View {
         VStack {
-            ForEach(options) { option in
+            ForEach(scene.options) { option in
+                let isActive = option === viewModel.getSelectedOption()
                 Button {
                     viewModel.gotoScene(of: option)
                 } label: {
                     Text(option.text)
                         .multilineTextAlignment(.leading)
                         .font(.custom(.dungGeun, size: 24))
-                        .foregroundColor(.black)
+                        .foregroundColor(isActive ? .idlePink : .black)
                         .padding(.vertical, 24)
                         .padding(.horizontal, 32)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .background(
-                            Image("layout_option")
+                            Image(isActive ? "layout_option_active" : "layout_option")
                                 .resizable(
                                     capInsets: EdgeInsets(top: 32, leading: 32, bottom: 32, trailing: 32),
                                     resizingMode: .tile
                                 )
                         )
+                }
+                .transaction {
+                    $0.animation = nil
                 }
             }
         }
