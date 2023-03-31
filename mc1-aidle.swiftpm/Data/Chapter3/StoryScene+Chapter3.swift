@@ -39,6 +39,7 @@ extension StoryScene {
         )
         
         static let worry = GeneralStoryScene(
+            image: ImageData(key: "desk05"),
             speaker: ExtraSpeaker.teamMembers,
             script: "그렇다면 우리가 뭘 해야하지?",
             nextScene: StoryScene.Stage3.sticker
