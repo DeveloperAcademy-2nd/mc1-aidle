@@ -21,10 +21,6 @@ extension StoryScene {
                 .init(
                     text: "저는 먼저 차타고 갈게요!",
                     nextScene: nil
-                ),
-                .init(
-                    text: "다같이 산책하면서 얘기하면서 가죠!",
-                    nextScene: nil
                 )
             ]
         )

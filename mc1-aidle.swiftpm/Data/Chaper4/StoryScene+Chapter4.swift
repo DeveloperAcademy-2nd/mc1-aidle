@@ -55,10 +55,6 @@ extension StoryScene {
                     nextScene: StoryScene.StoryScene4.theGlory
                 ),
                 .init(
-                    text: "분당 집을 판다.",
-                    nextScene: StoryScene.StoryScene4.theGlory
-                ),
-                .init(
                     text: "오늘 상 쳤으니 주식 일부를 판다.",
                     nextScene: StoryScene.StoryScene4.theGlory
                 )
