@@ -50,29 +50,7 @@ extension StoryScene {
         )
         
         static let runorpay = SelectionStoryScene(
-            speaker: Learner.byo,
-            script: "...",
-            options: [
-                .init(
-                    text: "차주에게 연락한다.",
-                    nextScene: nil
-                ),
-                .init(
-                    text: "튄다 (도망쳐 도망쳐)",
-                    nextScene: ckck
-                )
-            ]
-        )
-        
-        static let ckck = GeneralStoryScene(
-            image: ImageData(key: "usami"),
-            audioKey: "철컹",
-            script: "철컹철컹",
-            nextScene: StoryScene.Byo.runorpay2
-        )
-        
-        static let runorpay2 = SelectionStoryScene(
-            image: ImageData(key: "incar02"),
+            image: ImageData(key: "2byo"),
             speaker: Learner.byo,
             script: "...",
             options: [
@@ -82,12 +60,20 @@ extension StoryScene {
                 ),
                 .init(
                     text: "튄다 (도망쳐 도망쳐)",
-                    nextScene: nil
+                    nextScene: ckck
                 )
             ]
         )
         
+        static let ckck = EndingStoryScene(
+            image: ImageData(key: "usami"),
+            audioKey: "철컹",
+            script: "(철컹철컹)\n...\n뵤가 아카데미에서 퇴출되었다.",
+            nextScene: nil
+        )
+        
         static let sibal = EndingStoryScene(
+            image: ImageData(key: "incar02"),
             speaker: Learner.byo,
             script: "하하호호...하하하...하하...씨*",
             nextScene: LevelCard.Byo.byo
