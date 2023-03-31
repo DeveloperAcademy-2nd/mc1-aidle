@@ -34,7 +34,7 @@ extension StoryScene {
                 ),
                 .init(
                     text: "못들은 척하고 딴을 손절한다.",
-                    nextScene: StoryScene.StoryScene4.noMoney
+                    nextScene: nil
                 )
             ]
         )
@@ -56,7 +56,7 @@ extension StoryScene {
                 ),
                 .init(
                     text: "오늘 상 쳤으니 주식 일부를 판다.",
-                    nextScene: StoryScene.StoryScene4.theGlory
+                    nextScene: nil
                 )
             ]
         )
@@ -93,7 +93,7 @@ extension StoryScene {
                 ),
                 .init(
                     text: "조용히 가위질을 하며 버스를 탄다",
-                    nextScene: LevelCard.Stage4.ddan
+                    nextScene: nil
                 )
             ]
         )
@@ -113,7 +113,7 @@ extension StoryScene {
             options: [
                 .init(
                     text: "조용히 발표를 맡는다.",
-                    nextScene: StoryScene.StoryScene4.ending4
+                    nextScene: nil
                 ),
                 .init(
                     text: "단호하게 인생의 여정을 들려준다.",
