@@ -11,6 +11,8 @@ struct StageView: View {
     
     @ObservedObject var viewModel : StageViewModel
     
+    @State private var scale: CGFloat = 0.8
+    
     var body: some View {
         ZStack{
             Color.backgroundColor.ignoresSafeArea()
@@ -20,14 +22,22 @@ struct StageView: View {
                         .font(.custom(.neo, size: 80))
                         .foregroundColor(.titleTextColor)
                         .padding(.bottom, 1)
+                        .scaleEffect(x: scale, y: scale, anchor: .center)
                     Text(stage.title)
                         .font(.custom(.neo, size: 40))
                         .foregroundColor(.titleTextColor)
                         .padding(.bottom, 60)
+                        .scaleEffect(x: scale, y: scale, anchor: .center)
                     Image(stage.titleImageKey)
                         .resizable()
                         .scaledToFit()
                         .padding(.horizontal, 40)
+                        .scaleEffect(x: scale, y: scale, anchor: .center)
+                }
+            }
+            .onAppear {
+                withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.5, blendDuration: 0.5)) {
+                    scale = 1
                 }
             }
         }
