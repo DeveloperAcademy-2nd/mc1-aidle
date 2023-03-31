@@ -33,7 +33,12 @@ struct GifImage: UIViewRepresentable {
     func updateUIView(_ uiView: WKWebView, context: Context) {
         uiView.reload()
     }
-    
+}
+
+extension WKWebView {
+    override open var safeAreaInsets: UIEdgeInsets {
+        .zero
+    }
 }
 
 struct GifImage_Previews: PreviewProvider {

@@ -66,7 +66,7 @@ extension StoryScene {
         )
         
         static let theGlory = GeneralStoryScene(
-            image: ImageData(key: "2jake"),
+            image: ImageData(key: "jakepizza", isGif: true),
             audioKey: "멋지다연진아",
             speaker: Learner.jake,
             script: "비록 통장 잔고는 처참하지만... 야근.. 할 수 있겠지? 그래.. 그거면 된 거야... 멋지다 (A)I-dle!",
