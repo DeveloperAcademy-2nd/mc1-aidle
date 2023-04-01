@@ -5,7 +5,7 @@
     Mini Challenge1 - 2번째 CBL
     <br>
     <h2>📝Introduce📝</h2>
-    <img src="https://user-images.githubusercontent.com/87136217/229270201-7a51c94f-8649-4b23-acd7-12e72453a785.png" alt="intro" width=400>
+    <img src="https://user-images.githubusercontent.com/87136217/229270201-7a51c94f-8649-4b23-acd7-12e72453a785.png" alt="intro" width=300>
     <br>
     <img src="https://user-images.githubusercontent.com/87136217/229270100-b60ca136-ce83-4e84-b613-ca1c4e06859c.png" alt="intro" width=1000>
     <br>
