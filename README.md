@@ -1,7 +1,7 @@
 <div align="center">
     <img src="https://user-images.githubusercontent.com/87136217/229270446-0deaa851-db61-45d9-92a6-417052883feb.png" alt="intro" width=1000>
     <br>
-    <h2>🍎Group 5 _ 팀 15 : (A)-IDLE🌸</h2>
+    <h2>🍎Group 5 _ 팀 15 : (A)I-DLE🌸</h2>
     Mini Challenge1 - 2번째 CBL
     <br>
     <h2>📝Introduce📝</h2>
